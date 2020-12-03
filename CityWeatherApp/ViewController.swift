@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let weatherStatus: [String] = ["Sun", "Cloudly", "Night", "Lightning", "Rain"]
+    var counter = 0
+
     @IBOutlet weak var sunImage: UIImageView!
     @IBOutlet weak var smallCloudImage: UIImageView!
     @IBOutlet weak var bigCloudImage: UIImageView!
@@ -24,9 +27,33 @@ class ViewController: UIViewController {
 
     @IBAction func updateWeather(_ sender: UIButton) {
 
+        let selectedWeather: String = weatherStatus[counter]
+
+        switch selectedWeather {
+        case "Sun":
+            sunAnimation()
+            print("Sun")
+            counter+=1
+        case "Cloudly":
+            sunAnimationExit()
+            print("Cloudly")
+            counter-=1
+        case "Night":
+            print("Night")
+        case "Lightning":
+            print("Lightning")
+        case "Rain":
+            print("Rain")
+        default:
+            print("Nothing")
+        }
         //bigCloudImage.layer.position.y = 90
         //bigCloudImage.layer.position.x = -170
 
+
+    }
+
+    func sunAnimation() {
         var frameBigCloud = self.bigCloudImage.frame
         frameBigCloud.origin.x = 53
         var frameSmallCloud = self.smallCloudImage.frame
@@ -38,12 +65,35 @@ class ViewController: UIViewController {
         frame.size.height = 175
         frame.size.width = 180
 
+        self.sunImage.image = UIImage(named: "Sun")
         UIView.animate(withDuration: 1, delay: 0.0, options: .curveEaseOut, animations: {
         self.bigCloudImage.frame = frameBigCloud
             self.smallCloudImage.frame = frameSmallCloud
         self.sunImage.frame = frame
         }){ (true) in
         print("Done")
+        }
+    }
+
+    func sunAnimationExit() {
+        var frameBigCloud = self.bigCloudImage.frame
+        frameBigCloud.origin.x = -170
+        var frameSmallCloud = self.smallCloudImage.frame
+        frameSmallCloud.origin.x = 403
+
+        var frame = self.sunImage.frame
+        frame.origin.y = 112.67
+        frame.origin.x = 190
+        frame.size.height = 1
+        frame.size.width = 1
+
+        UIView.animate(withDuration: 1, delay: 0.0, options: .curveEaseIn, animations: {
+        self.bigCloudImage.frame = frameBigCloud
+        self.smallCloudImage.frame = frameSmallCloud
+        self.sunImage.frame = frame
+        }){ (true) in
+        print("Done")
+        self.sunImage.image = nil
         }
     }
 
