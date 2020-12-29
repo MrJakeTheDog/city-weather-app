@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DrawerView
 
 class ViewController: UIViewController {
 
@@ -22,6 +23,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateButton.layer.cornerRadius = 15
+
+        let drawerView = DrawerView()
+           drawerView.attachTo(view: self.view)
+
+
+        drawerView.snapPositions = [.partiallyOpen, .open]
+        drawerView.position = .partiallyOpen
+        drawerView.cornerRadius = 25
     }
 
 
@@ -47,10 +56,6 @@ class ViewController: UIViewController {
         default:
             print("Nothing")
         }
-        //bigCloudImage.layer.position.y = 90
-        //bigCloudImage.layer.position.x = -170
-
-
     }
 
     func sunAnimation() {
