@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bigCloudImage: UIImageView!
     @IBOutlet weak var updateButton: UIButton!
 
+    var viewArray: [UIView] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +31,38 @@ class ViewController: UIViewController {
 
         drawerView.snapPositions = [.partiallyOpen, .open]
         drawerView.position = .partiallyOpen
-        drawerView.cornerRadius = 25
+        drawerView.cornerRadius = 30
+        drawerView.backgroundColor = .white
+
+        let graphicProggressView = UIProgressView(frame: CGRect(x: drawerView.frame.width/2 - 40, y: 40, width: 90, height: 5))
+
+        graphicProggressView.progress = 100
+        graphicProggressView.progressTintColor = #colorLiteral(red: 0.1853383482, green: 0.2678459585, blue: 0.870508492, alpha: 1)
+        graphicProggressView.transform = graphicProggressView.transform.scaledBy(x: 1, y: 1.15)
+
+        drawerView.addSubview(graphicProggressView)
+
+        for i in 0...4 {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
+            let simularView = UIView(frame: CGRect(x: 12+drawerView.bounds.width/5 * CGFloat(i), y: 150, width: 55, height: 85))
+            simularView.layer.cornerRadius = 15
+            simularView.layer.masksToBounds = true
+            simularView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            simularView.layer.borderWidth = 2
+            simularView.addGestureRecognizer(tap)
+            viewArray.append(simularView)
+            drawerView.addSubview(viewArray[i])
+        }
     }
 
+    @objc func handleTap(sender: UITapGestureRecognizer? = nil) {
+        for i in 0...4 {
+            viewArray[i].backgroundColor = .white
+            viewArray[i].layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        }
+        sender?.view?.backgroundColor = #colorLiteral(red: 0.2917807996, green: 0.3460126817, blue: 0.8788960576, alpha: 1)
+        sender?.view?.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    }
 
     @IBAction func updateWeather(_ sender: UIButton) {
 
@@ -42,11 +72,11 @@ class ViewController: UIViewController {
         case "Sun":
             sunAnimation()
             print("Sun")
-            counter+=1
+            counter += 1
         case "Cloudly":
             sunAnimationExit()
             print("Cloudly")
-            counter-=1
+            counter -= 1
         case "Night":
             print("Night")
         case "Lightning":
