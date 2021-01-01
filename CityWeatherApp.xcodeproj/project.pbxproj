@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2385B0D82578583D006A061E /* Josefin Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2385B0D72578583C006A061E /* Josefin Sans.ttf */; };
+		232CEA3B259E42770071F415 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 232CEA3A259E42770071F415 /* JosefinSans-Bold.ttf */; };
+		232CEA40259E617F0071F415 /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 232CEA3F259E617F0071F415 /* JosefinSans-SemiBold.ttf */; };
+		2385B0D82578583D006A061E /* Josefin-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2385B0D72578583C006A061E /* Josefin-Sans.ttf */; };
 		23E88DD025753B3100D223D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E88DCF25753B3100D223D9 /* AppDelegate.swift */; };
 		23E88DD225753B3100D223D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E88DD125753B3100D223D9 /* SceneDelegate.swift */; };
 		23E88DD425753B3100D223D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E88DD325753B3100D223D9 /* ViewController.swift */; };
@@ -19,7 +21,9 @@
 
 /* Begin PBXFileReference section */
 		016972DE55C660B4AA56B9B7 /* Pods-CityWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityWeatherApp.release.xcconfig"; path = "Target Support Files/Pods-CityWeatherApp/Pods-CityWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
-		2385B0D72578583C006A061E /* Josefin Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Josefin Sans.ttf"; sourceTree = "<group>"; };
+		232CEA3A259E42770071F415 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
+		232CEA3F259E617F0071F415 /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		2385B0D72578583C006A061E /* Josefin-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Josefin-Sans.ttf"; sourceTree = "<group>"; };
 		23E88DCC25753B3100D223D9 /* CityWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E88DCF25753B3100D223D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23E88DD125753B3100D223D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +51,9 @@
 		2385B0D62578580A006A061E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				2385B0D72578583C006A061E /* Josefin Sans.ttf */,
+				232CEA3A259E42770071F415 /* JosefinSans-Bold.ttf */,
+				2385B0D72578583C006A061E /* Josefin-Sans.ttf */,
+				232CEA3F259E617F0071F415 /* JosefinSans-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -91,7 +97,6 @@
 				C562D5968A579796EC78B16C /* Pods-CityWeatherApp.debug.xcconfig */,
 				016972DE55C660B4AA56B9B7 /* Pods-CityWeatherApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -164,9 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23E88DDC25753B3A00D223D9 /* LaunchScreen.storyboard in Resources */,
+				232CEA40259E617F0071F415 /* JosefinSans-SemiBold.ttf in Resources */,
 				23E88DD925753B3A00D223D9 /* Assets.xcassets in Resources */,
 				23E88DD725753B3100D223D9 /* Main.storyboard in Resources */,
-				2385B0D82578583D006A061E /* Josefin Sans.ttf in Resources */,
+				2385B0D82578583D006A061E /* Josefin-Sans.ttf in Resources */,
+				232CEA3B259E42770071F415 /* JosefinSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
