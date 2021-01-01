@@ -12,8 +12,8 @@
 	<string>6.0</string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>JosefinSans-Regular.ttf</string>
 		<string>JosefinSans-SemiBold.ttf</string>
-		<string>Josefin-Sans.ttf</string>
 		<string>JosefinSans-Bold.ttf</string>
 	</array>
 	<key>CFBundleName</key>
