@@ -73,16 +73,16 @@ class ViewController: UIViewController {
             let time: String = String(19 + i) + ":00"
             simularLabel.text = time
             simularLabel.textAlignment = .center
-            simularLabel.font = UIFont(name: "JosefinSans-SemiBold", size: 16)
+            simularLabel.font = UIFont(name: "JosefinSans-Regular", size: 17)
             simularLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             labelArray.append(simularLabel)
             simularView.addSubview(simularLabel)
 
-            let simularTempretureLabel = UILabel(frame: CGRect(x: 0, y: simularView.bounds.height-25, width: simularView.bounds.width, height: 20))
+            let simularTempretureLabel = UILabel(frame: CGRect(x: 0, y: simularView.bounds.height-23, width: simularView.bounds.width, height: 20))
             let tempreture = String(19-i) + "°"
             simularTempretureLabel.text = tempreture
             simularTempretureLabel.textAlignment = .center
-            simularTempretureLabel.font = UIFont(name: "JosefinSans-SemiBold", size: 16)
+            simularTempretureLabel.font = UIFont(name: "JosefinSans-Regular", size: 17)
             simularTempretureLabel.textColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
             labelTempretureArray.append(simularTempretureLabel)
             simularView.addSubview(simularTempretureLabel)
